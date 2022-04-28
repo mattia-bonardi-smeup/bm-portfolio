@@ -9,6 +9,10 @@ export default {
     icon: {
       type: String,
       default: null,
+    },
+    size: {
+      type: String,
+      default: "16"
     }
   },
   emits: ["iconClick"],
@@ -18,7 +22,9 @@ export default {
       return (
         "-webkit-mask: url(/icons/" +
         props.icon +
-        ".svg) center center no-repeat;"
+        ".svg) center center no-repeat;" +
+        "width: " + props.size + "px;" +
+        "height: " + props.size + "px;"
       );
     });
     const onClick = () => {
@@ -35,8 +41,6 @@ export default {
 
 <style>
 .icon {
-  background: #000;
-  height: 20px;
-  max-width: 20px;
+  background: #FFF;
 }
 </style>
