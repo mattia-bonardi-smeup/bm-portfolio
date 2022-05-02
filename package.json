@@ -6,6 +6,9 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview"
   },
+  "dependencies": {
+    "globe.gl": "^2.26.1"
+  },
   "devDependencies": {
     "nuxt": "3.0.0-rc.1"
   }

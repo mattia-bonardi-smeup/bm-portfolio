@@ -1,17 +1,27 @@
 <template>
-  <!-- Background -->
-  <div class="mesh-container"></div>
-  <div class="title-wrapper">
-      <h2 class="subtitle">I'm Mattia, a full stack</h2>
-      <h1 class="title">DEVELOPER</h1>
+  <div>
+    <div class="mesh-container">
+      <!--<Marble></Marble>-->
+    </div>
+    <div class="title-wrapper">
+        <h2 class="subtitle">I'm Mattia, a full stack</h2>
+        <h1 class="title">DEVELOPER.</h1>
+    </div>
+    <footer class="footer">
+      <icon class="social" icon="instagram" size="20" @click="toInstagram"></icon>
+      <icon class="social" icon="github" size="20" @click="toGitHub"></icon>
+      <icon class="social" icon="linkedin" size="20" @click="toLinkedin"></icon>
+      <icon class="social" icon="mail" size="20" @click="toMail"></icon>
+    </footer>
   </div>
-  <footer class="footer">
-    <icon icon="instagram" size="20"></icon>
-    <icon icon="github" size="20"></icon>
-    <icon icon="linkedin" size="20"></icon>
-    <icon icon="mail" size="20"></icon>
-  </footer>
 </template>
+
+<script setup lang="ts">
+const toLinkedin = () => window.open("https://www.linkedin.com/in/mattia-bonardi-099b02235/","_blank");
+const toInstagram = () => window.open("https://www.instagram.com/mattiaabonardi/", "_blank");
+const toGitHub = () => window.open("https://github.com/mattiabonardi", "_blank");
+const toMail = () => window.open('mailto:mattiabonardi99@gmail.com');
+</script>
 
 <style>
 /** Background */
@@ -50,5 +60,9 @@
   align-items: center;
   justify-content: center;
   gap: 40px;
+}
+
+.social{
+  cursor: pointer;
 }
 </style>
