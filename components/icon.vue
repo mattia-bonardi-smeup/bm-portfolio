@@ -20,7 +20,7 @@ export default {
     const iconElement: Ref<HTMLElement> = ref();
     const iconStyle: ComputedRef<string> = computed(() => {
       return (
-        "-webkit-mask: url(/icons/" +
+        "-webkit-mask: url(assets/icons/" +
         props.icon +
         ".svg) center center no-repeat;" +
         "width: " + props.size + "px;" +

@@ -5,7 +5,7 @@
     </div>
     <div class="title-wrapper">
         <h2 class="subtitle">I'm Mattia, a full stack</h2>
-        <h1 class="title">DEVELOPER.</h1>
+        <h1 class="title">DEVELOPER</h1>
     </div>
     <footer class="footer">
       <icon class="social" icon="instagram" size="20" @click="toInstagram"></icon>
@@ -46,12 +46,14 @@ const toMail = () => window.open('mailto:mattiabonardi99@gmail.com');
 
 .title{
   font-size: 40px;
-  font-weight: bold;
   margin: 0;
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 0.5px;
 }
 
 .subtitle{
   font-size: 20px;
+  font-family: 'Lato', sans-serif;
 }
 
 .footer{

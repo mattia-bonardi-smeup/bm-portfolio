@@ -65,6 +65,10 @@ const menuToggle = () => {
 .logo{
   font-size: 35px;
   cursor: pointer;
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 2px;
+  text-decoration: none;
+  color: white;
 }
 
 .menu{

@@ -5,7 +5,9 @@
   </div>
 </template>
 
-<style>
+<style lang="css">
+@import url('https://fonts.googleapis.com/css2?family=Days+One&family=Lato:wght@300&family=Roboto&display=swap');
+
 html, body{
   color: #FFF;
   width: 100%;
@@ -13,5 +15,6 @@ html, body{
   margin: 0;
   padding: 0;
   background-color: rgb(32, 33, 36);
+  font-family: 'Roboto', sans-serif;
 }
 </style>
