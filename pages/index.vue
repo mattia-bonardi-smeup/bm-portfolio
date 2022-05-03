@@ -1,7 +1,9 @@
 <template>
   <div>
     <div class="mesh-container">
-      <!--<Marble></Marble>-->
+      <client-only>
+        <Marble></Marble>
+      </client-only>
     </div>
     <div class="title-wrapper">
         <h2 class="subtitle">I'm Mattia, a full stack</h2>
@@ -15,6 +17,18 @@
     </footer>
   </div>
 </template>
+
+<script lang="ts">
+export default {
+  components: {
+    Marble: () => {
+      if(process.client) {
+        return import('../components/marble.vue');
+      }
+    },
+  }
+}
+</script>
 
 <script setup lang="ts">
 const toLinkedin = () => window.open("https://www.linkedin.com/in/mattia-bonardi-099b02235/","_blank");
@@ -32,16 +46,21 @@ const toMail = () => window.open('mailto:mattiabonardi99@gmail.com');
   left: 0;
   width: 100%;
   height: 100vh;
-  background-color: rgb(32, 33, 36);
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
 
 .title-wrapper {
+  position: relative;
   padding: 0 75px 0;
   text-align: right;
   height: 60vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  opacity: 0.86;
+  z-index: 5;
 }
 
 .title{
@@ -57,7 +76,7 @@ const toMail = () => window.open('mailto:mattiabonardi99@gmail.com');
 }
 
 .footer{
-  height: 25vh;
+  height: 20vh;
   display: flex;
   align-items: center;
   justify-content: center;

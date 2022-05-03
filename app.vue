@@ -11,10 +11,26 @@
 html, body{
   color: #FFF;
   width: 100%;
-  height: 100vh;
   margin: 0;
   padding: 0;
-  background-color: rgb(32, 33, 36);
+  border: 0;
   font-family: 'Roboto', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(90, 90, 90);
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
 }
 </style>

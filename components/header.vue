@@ -48,7 +48,6 @@ const menuToggle = () => {
   display: flex;
   align-items: center;
   padding: 75px 35px 0px;
-  box-sizing: border-box;
 }
 
 .navbar{
@@ -81,7 +80,7 @@ const menuToggle = () => {
   justify-content: center;
   gap: 40px;
   display: none;
-  z-index: 2;
+  z-index: 10;
   margin: 0;
   padding: 0;
   background-color: #121212;
@@ -106,7 +105,7 @@ const menuToggle = () => {
 .menu-button{
   position: relative;
   cursor: pointer;
-  z-index: 300;
+  z-index: 20;
 }
 
 /** Desktop */

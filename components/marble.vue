@@ -1,27 +1,42 @@
 <template>
-  <div ref="globeContainer"></div>
+  <div ref="container"></div>
 </template>
 
 <script lang="ts">
-import { onMounted } from "@vue/runtime-core";
-import Globe, { GlobeInstance } from "globe.gl";
-import { ref } from "vue";
+import * as THREE from "three";
+import { Ref, ref } from "vue";
 
 export default {
   setup() {
-    const globeContainer = ref();
+    const container: Ref<HTMLDivElement> = ref();
+
+    const camera = new THREE.PerspectiveCamera( 70, window.innerWidth / window.innerHeight, 0.01, 10 );
+    camera.position.z = 1;
+
+    const scene = new THREE.Scene();
+
+    const geometry = new THREE.BoxGeometry( 0.2, 0.2, 0.2 );
+    const material = new THREE.MeshNormalMaterial();
+
+    const mesh = new THREE.Mesh( geometry, material );
+    scene.add( mesh );
+
+    const renderer = new THREE.WebGLRenderer( { antialias: true } );
+    renderer.setSize( window.innerWidth, window.innerHeight );
+    renderer.setAnimationLoop( animation );
 
     onMounted(() => {
-      const globe: GlobeInstance = Globe({ animateIn: true });
-      globe(globeContainer.value as HTMLDivElement)
-        .globeImageUrl("images/marble.jpg")
-        .backgroundImageUrl("images/sky.png");
-      (globe.controls() as any).autoRotate = true;
-      (globe.controls() as any).autoRotateSpeed = 0.6;
-    });
+      container.value.appendChild( renderer.domElement );
+    })
+
+    function animation(time) {
+      mesh.rotation.x = time / 2000;
+      mesh.rotation.y = time / 1000;
+      renderer.render( scene, camera );
+    }
 
     return {
-      globeContainer,
+      container
     };
   },
 };
