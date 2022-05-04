@@ -13,9 +13,67 @@
         I will always have the strength to listen and learn something new, 
         even if it does not belong to me completely.
       </div>
-      <div class="skill-wrapper">
-          <h2 class="skill-title">Back-End</h2>
-
+      <div class="skills-section">
+        <h2 class="skills-title">Back End Skills</h2>
+        <div class="skills-wrapper">
+          <div class="skills-row">
+            <skillchip icon="node-js" text="Node js"></skillchip>
+            <skillchip icon="vitejs" text="Vite js"></skillchip>
+          </div>
+          <div class="skills-row">
+            <skillchip icon="java" text="Java EE"></skillchip>
+            <skillchip icon="vertx" text="Vert.X"></skillchip>
+            <skillchip icon="spring-boot" text="Spring Boot"></skillchip>
+          </div>
+          <div class="skills-row">
+            <skillchip icon="mongo" text="Mongo"></skillchip>
+            <skillchip icon="mysql" text="MySql"></skillchip>
+            <skillchip icon="redis" text="Redis"></skillchip>
+            <skillchip icon="firebase" text="Firebase"></skillchip>
+          </div>
+          <div class="skills-row">
+            <skillchip icon="nginx" text="Nginx"></skillchip>
+            <skillchip icon="as400" text="As400"></skillchip>
+            <skillchip icon="c++" text="C++"></skillchip>
+          </div>
+        </div>
+      </div>
+      <div class="skills-section">
+        <h2 class="skills-title">Front End Skills</h2>
+        <div class="skills-wrapper">
+          <div class="skills-row">
+            <skillchip icon="nuxt" text="Nuxt js"></skillchip>
+            <skillchip icon="vue-js" text="Vue js"></skillchip>
+            <skillchip icon="electron" text="Electron js"></skillchip>
+          </div>
+          <div class="skills-row">
+            <skillchip icon="html" text="HTML5"></skillchip>
+            <skillchip icon="css" text="CSS3"></skillchip>
+          </div>
+          <div class="skills-row">
+            <skillchip icon="typescript" text="Typescript"></skillchip>
+            <skillchip icon="javascript" text="Javascript"></skillchip>
+          </div>
+        </div>
+      </div>
+      <div class="skills-section">
+        <h2 class="skills-title">Deployments Skills</h2>
+        <div class="skills-wrapper">
+          <div class="skills-row">
+            <skillchip icon="docker" text="Docker"></skillchip>
+            <skillchip icon="vmware" text="vmware"></skillchip>
+            <skillchip icon="heroku" text="Heroku"></skillchip>
+          </div>
+          <div class="skills-row">
+            <skillchip icon="ubuntu" text="Ubuntu"></skillchip>
+            <skillchip icon="opensuse" text="OpenSuse"></skillchip>
+            <skillchip icon="raspberry-pi" text="Raspberry Pi"></skillchip>
+          </div>
+          <div class="skills-row">
+            <skillchip icon="lambda" text="AWS Lambda"></skillchip>
+            <skillchip icon="s3" text="AWS S3"></skillchip>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -57,15 +115,30 @@
   font-size: 24px;
 }
 
-.skill-wrapper{
+.skills-section{
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  height: 100vh;
 }
-.skill-title{
+.skills-title{
   font-family: "Lato",sans-serif;
   text-align: center;
-  font-size: 30px;
+  font-size: 35px;
+}
+
+.skills-wrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.skills-row{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  gap: 10px;
 }
 
 </style>

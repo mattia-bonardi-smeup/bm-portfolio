@@ -13,6 +13,10 @@ export default {
     size: {
       type: String,
       default: "16"
+    },
+    color: {
+      type: String,
+      default: "white"
     }
   },
   emits: ["iconClick"],
@@ -24,7 +28,8 @@ export default {
         props.icon +
         ".svg) center center no-repeat;" +
         "width: " + props.size + "px;" +
-        "height: " + props.size + "px;"
+        "height: " + props.size + "px;" + 
+        "background: " + props.color
       );
     });
     const onClick = () => {
@@ -38,9 +43,3 @@ export default {
   },
 };
 </script>
-
-<style>
-.icon {
-  background: #FFF;
-}
-</style>
