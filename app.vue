@@ -9,7 +9,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Days+One&family=Lato:wght@300&family=Roboto&display=swap');
 
 html, body{
-  color: #FFF;
+  color: #E8EAED;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -32,5 +32,55 @@ html, body{
 
 ::-webkit-scrollbar-track {
   background: rgba(0, 0, 0, 0.2);
+}
+
+/** Animations */ 
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 </style>

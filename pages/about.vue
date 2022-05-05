@@ -5,16 +5,18 @@
       <div class="profile-image-wrapper">
         <img src="assets/images/profile.png" class="profile-image" />
       </div>
-      <div class="description">
-        I'm Mattia Bonardi and I come from Italy. 
-        I believe that each of us must never set limits. 
-        Everyone must aspire to be the best version of themselves. 
-        This is my vision and it's the reason why 
-        I will always have the strength to listen and learn something new, 
-        even if it does not belong to me completely.
+      <div class="section">
+        <div class="presentation">
+          I'm Mattia Bonardi and I come from Italy. 
+          I believe that each of us must never set limits. 
+          Everyone must aspire to be the best version of themselves. 
+          This is my vision and it's the reason why 
+          I will always have the strength to listen and learn something new, 
+          even if it does not belong to me completely.
+        </div>
       </div>
-      <div class="skills-section">
-        <h2 class="skills-title">Back End Skills</h2>
+      <div class="section">
+        <h2 class="section-title">Back End Skills</h2>
         <div class="skills-wrapper">
           <div class="skills-row">
             <skillchip icon="node-js" text="Node js"></skillchip>
@@ -38,8 +40,8 @@
           </div>
         </div>
       </div>
-      <div class="skills-section">
-        <h2 class="skills-title">Front End Skills</h2>
+      <div class="section">
+        <h2 class="section-title">Front End Skills</h2>
         <div class="skills-wrapper">
           <div class="skills-row">
             <skillchip icon="nuxt" text="Nuxt js"></skillchip>
@@ -56,8 +58,8 @@
           </div>
         </div>
       </div>
-      <div class="skills-section">
-        <h2 class="skills-title">Deployments Skills</h2>
+      <div class="section">
+        <h2 class="section-title">Deployments Skills</h2>
         <div class="skills-wrapper">
           <div class="skills-row">
             <skillchip icon="docker" text="Docker"></skillchip>
@@ -72,6 +74,45 @@
           <div class="skills-row">
             <skillchip icon="lambda" text="AWS Lambda"></skillchip>
             <skillchip icon="s3" text="AWS S3"></skillchip>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <h2 class="section-title">Experience</h2>
+        <div class="experience-wrapper">
+          <div class="experience-element">
+            <div class="experience-element-description">
+              Smeup R&D - Full Stack Developer
+            </div>
+            <div class="experience-element-daterange">
+              2020/12 - current
+            </div>
+          </div>
+          <div class="experience-element">
+            <div class="experience-element-description">
+              Smeup R&D - Back End Developer (stage) - I developed a java microservice 
+              (with Vert.X) which allows to interpret the Smeup DSL languages.
+            </div>
+            <div class="experience-element-daterange">
+              2020/09 - 2020/12
+            </div>
+          </div>
+          <div class="experience-element">
+            <div class="experience-element-description">
+              Smeup R&D - Back End Developer (stage) - I developed a software for 
+              the control of a hydroponic station.
+            </div>
+            <div class="experience-element-daterange">
+              2019/06 - 2019/08
+            </div>
+          </div>
+          <div class="experience-element">
+            <div class="experience-element-description">
+              Software Design & Web Development student at JobsAcademy
+            </div>
+            <div class="experience-element-daterange">
+              2018/08 - 2020/12
+            </div>
           </div>
         </div>
       </div>
@@ -90,7 +131,7 @@
   margin: 0;
   padding: 0;
   border: 0;
-  background-color: black;
+  background-color: rgb(22, 22, 22);
 }
 
 .container{
@@ -100,13 +141,31 @@
 
 .profile-image-wrapper{
   width: 100%;
+  -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 3s; /* Firefox < 16 */
+  -ms-animation: fadein 3s; /* Internet Explorer */
+  -o-animation: fadein 3s; /* Opera < 12.1 */
+  animation: fadein 3s;
 }
 
 .profile-image{
   max-width: 100%;
 }
 
-.description{
+.section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 3s; /* Firefox < 16 */
+  -ms-animation: fadein 3s; /* Internet Explorer */
+  -o-animation: fadein 3s; /* Opera < 12.1 */
+  animation: fadein 3s;
+}
+
+.presentation{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -115,14 +174,7 @@
   font-size: 24px;
 }
 
-.skills-section{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  height: 100vh;
-}
-.skills-title{
+.section-title{
   font-family: "Lato",sans-serif;
   text-align: center;
   font-size: 35px;
@@ -139,6 +191,27 @@
   align-content: center;
   justify-content: center;
   gap: 10px;
+}
+
+.experience-wrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.experience-element{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.experience-element-description{
+  text-align: left;
+  width: 75%;
+}
+
+.experience-element-daterange{
+  text-align: right;
 }
 
 </style>
