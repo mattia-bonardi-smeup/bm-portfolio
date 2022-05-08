@@ -67,7 +67,7 @@ const menuToggle = () => {
   font-family: 'Lato', sans-serif;
   letter-spacing: 2px;
   text-decoration: none;
-  color: white;
+  color: #e8eaed;
 }
 
 .menu{

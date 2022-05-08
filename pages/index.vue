@@ -87,4 +87,19 @@ const toMail = () => window.open('mailto:mattiabonardi99@gmail.com');
 .social{
   cursor: pointer;
 }
+
+/** Desktop */
+@media screen and (min-width: 992px) {
+  .title-wrapper{
+    padding: 0 200px 0;
+  }
+
+  .title{
+    font-size: 100px;
+  }
+
+  .subtitle {
+    font-size: 40px;
+  }
+}
 </style>

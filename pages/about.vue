@@ -236,4 +236,27 @@ onMounted(() => {
   text-align: right;
 }
 
+/** Desktop */
+@media screen and (min-width: 992px) {
+  .container{
+    padding: 0 250px 0;
+  }
+
+  .profile-image-wrapper{
+    margin-top: 80px;
+    height: auto;
+  }
+
+  .presentation{
+    font-size: 36px;
+  }
+
+  .section-title{
+    font-size: 60px;
+  }
+
+  .experience-element{
+    font-size: 18px;
+  }
+}
 </style>
