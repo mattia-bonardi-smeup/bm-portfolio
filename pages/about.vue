@@ -129,7 +129,7 @@ const reveal = () => {
     var windowHeight = window.innerHeight;
     var elementTop = reveals[i].getBoundingClientRect().top;
 
-    if (elementTop < windowHeight) {
+    if (elementTop < windowHeight - 250) {
       reveals[i].classList.add("reveal-active");
     } else {
       reveals[i].classList.remove("reveal-active");
