@@ -83,4 +83,18 @@ html, body{
     opacity: 1;
   }
 }
+
+/** Reveal effect */
+.reveal{
+  opacity: 0;
+}
+
+.reveal.reveal-active{
+  opacity: 1;
+  -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 3s; /* Firefox < 16 */
+  -ms-animation: fadein 3s; /* Internet Explorer */
+  -o-animation: fadein 3s; /* Opera < 12.1 */
+  animation: fadein 3s;
+}
 </style>

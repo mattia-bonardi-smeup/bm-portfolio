@@ -4,8 +4,9 @@
     <div class="container">
       <div class="profile-image-wrapper">
         <img src="assets/images/profile.png" class="profile-image" />
+        Berlin, 2022/02/21
       </div>
-      <div class="section">
+      <div class="section reveal">
         <div class="presentation">
           I'm Mattia Bonardi and I come from Italy. 
           I believe that each of us must never set limits. 
@@ -15,7 +16,7 @@
           even if it does not belong to me completely.
         </div>
       </div>
-      <div class="section">
+      <div class="section reveal">
         <h2 class="section-title">Back End Skills</h2>
         <div class="skills-wrapper">
           <div class="skills-row">
@@ -40,7 +41,7 @@
           </div>
         </div>
       </div>
-      <div class="section">
+      <div class="section reveal">
         <h2 class="section-title">Front End Skills</h2>
         <div class="skills-wrapper">
           <div class="skills-row">
@@ -58,7 +59,7 @@
           </div>
         </div>
       </div>
-      <div class="section">
+      <div class="section reveal">
         <h2 class="section-title">Deployments Skills</h2>
         <div class="skills-wrapper">
           <div class="skills-row">
@@ -77,7 +78,7 @@
           </div>
         </div>
       </div>
-      <div class="section">
+      <div class="section reveal">
         <h2 class="section-title">Experience</h2>
         <div class="experience-wrapper">
           <div class="experience-element">
@@ -120,6 +121,27 @@
   </div>
 </template>
 
+<script setup lang="ts">
+const reveal = () => {
+  var reveals = document.querySelectorAll(".reveal");
+
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals[i].getBoundingClientRect().top;
+
+    if (elementTop < windowHeight) {
+      reveals[i].classList.add("reveal-active");
+    } else {
+      reveals[i].classList.remove("reveal-active");
+    }
+  }
+}
+
+onMounted(() => {
+  window.addEventListener('scroll', reveal);
+});
+</script>
+
 <style scoped>
 .mesh-container{
   position: fixed;
@@ -136,16 +158,21 @@
 
 .container{
   width: 100%;
-  padding: 50px 35px 0px;
+  padding: 0px 35px 0px;
 }
 
 .profile-image-wrapper{
+  display: flex;
+  justify-content: center;
+  height: calc(100vh - 116px);
   width: 100%;
+  flex-direction: column;
   -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
   -moz-animation: fadein 3s; /* Firefox < 16 */
   -ms-animation: fadein 3s; /* Internet Explorer */
   -o-animation: fadein 3s; /* Opera < 12.1 */
   animation: fadein 3s;
+  font-style: italic;
 }
 
 .profile-image{
@@ -158,11 +185,6 @@
   align-items: center;
   flex-direction: column;
   height: 100vh;
-  -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
-  -moz-animation: fadein 3s; /* Firefox < 16 */
-  -ms-animation: fadein 3s; /* Internet Explorer */
-  -o-animation: fadein 3s; /* Opera < 12.1 */
-  animation: fadein 3s;
 }
 
 .presentation{
