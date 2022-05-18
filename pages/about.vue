@@ -117,6 +117,10 @@
           </div>
         </div>
       </div>
+      <div class="section reveal">
+        <h2 class="contact-title">Feel free<br>to contact me</h2>
+        <h2 class="contact-mail">mattiabonardi99@gmail.com</h2>
+      </div>
     </div>
   </div>
 </template>
@@ -234,6 +238,18 @@ onMounted(() => {
 
 .experience-element-daterange{
   text-align: right;
+}
+
+.contact-title{
+  font-family: "Lato",sans-serif;
+  text-align: left;
+  font-size: 35px;
+}
+
+.contact-mail{
+  font-family: "Lato",sans-serif;
+  text-align: right;
+  font-size: 20px;
 }
 
 /** Desktop */

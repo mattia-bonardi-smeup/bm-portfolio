@@ -2,7 +2,7 @@
   <div>
     <div class="mesh-container">
       <client-only>
-        <Marble></Marble>
+        <Lunar></Lunar>
       </client-only>
     </div>
     <div class="title-wrapper">
@@ -21,9 +21,9 @@
 <script lang="ts">
 export default {
   components: {
-    Marble: () => {
+    Lunar: () => {
       if(process.client) {
-        return import('../components/marble.vue');
+        return import('../components/lunar.vue');
       }
     },
   }
