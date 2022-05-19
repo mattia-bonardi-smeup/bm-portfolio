@@ -17,14 +17,21 @@ onMounted(() => {
 			renderer.setSize( window.innerWidth, window.innerHeight );
 			globeContainer.value.appendChild( renderer.domElement );
 
-			const geometry = new THREE.SphereGeometry( 15, 32, 16 );
-			const material = new THREE.MeshBasicMaterial({ 
+      // set light
+      scene.add(new THREE.AmbientLight(0x333333));
+      const light = new THREE.DirectionalLight(0xffffff, 1);
+      light.position.set(5,3,5);
+      scene.add(light);
+
+      // create lunar object
+			const lunarGeometry = new THREE.SphereGeometry(1, 32, 32);
+			const lunarMaterial = new THREE.MeshBasicMaterial({ 
         map: new THREE.TextureLoader().load("/assets/textures/lunar.png")
       });
-			const lunar = new THREE.Mesh( geometry, material );
+			const lunar = new THREE.Mesh( lunarGeometry, lunarMaterial );
 			scene.add(lunar);
 
-			camera.position.z = 50;
+			camera.position.z = 3;
 
       function animate() {
         lunar.rotation.y += 0.001;

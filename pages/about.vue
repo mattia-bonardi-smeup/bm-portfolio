@@ -6,7 +6,7 @@
         <img src="assets/images/profile.png" class="profile-image" />
         Berlin, 2022/02/21
       </div>
-      <div class="section reveal">
+      <div class="section">
         <div class="presentation">
           I'm Mattia Bonardi and I come from Italy. 
           I believe that each of us must never set limits. 
@@ -16,7 +16,7 @@
           even if it does not belong to me completely.
         </div>
       </div>
-      <div class="section reveal">
+      <div class="section">
         <h2 class="section-title">Back End Skills</h2>
         <div class="skills-wrapper">
           <div class="skills-row">
@@ -41,7 +41,7 @@
           </div>
         </div>
       </div>
-      <div class="section reveal">
+      <div class="section">
         <h2 class="section-title">Front End Skills</h2>
         <div class="skills-wrapper">
           <div class="skills-row">
@@ -59,7 +59,7 @@
           </div>
         </div>
       </div>
-      <div class="section reveal">
+      <div class="section">
         <h2 class="section-title">Deployments Skills</h2>
         <div class="skills-wrapper">
           <div class="skills-row">
@@ -78,7 +78,7 @@
           </div>
         </div>
       </div>
-      <div class="section reveal">
+      <div class="section">
         <h2 class="section-title">Experience</h2>
         <div class="experience-wrapper">
           <div class="experience-element">
@@ -117,7 +117,7 @@
           </div>
         </div>
       </div>
-      <div class="section reveal">
+      <div class="section">
         <h2 class="contact-title">Feel free<br>to contact me</h2>
         <h2 class="contact-mail">mattiabonardi99@gmail.com</h2>
       </div>
