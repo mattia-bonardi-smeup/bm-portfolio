@@ -5,7 +5,7 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "heroku-postbuild": "nuxt build"
+    "start": "node .output/server/index.mjs"
   },
   "dependencies": {
     "three": "^0.140.0"
