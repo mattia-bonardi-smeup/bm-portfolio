@@ -26,8 +26,8 @@ onMounted(() => {
       // create lunar object
 			const lunarGeometry = new THREE.SphereGeometry(1, 32, 32);
 			const lunarMaterial = new THREE.MeshBasicMaterial({ 
-        map: new THREE.TextureLoader().load("textures/lunar.png"),
-				bumpMap: new THREE.TextureLoader().load("textures/lunar_bump.png")
+        map: new THREE.TextureLoader().load("/textures/lunar.png"),
+				bumpMap: new THREE.TextureLoader().load("/textures/lunar_bump.png")
       });
 			const lunar = new THREE.Mesh( lunarGeometry, lunarMaterial );
 			scene.add(lunar);
