@@ -14,7 +14,7 @@ export default {
   },
   setup(props){
     const src: Ref<string> = ref();
-    src.value = "/assets/icons/" + props.icon + ".svg";
+    src.value = "icons/" + props.icon + ".svg";
 
     return {
       src

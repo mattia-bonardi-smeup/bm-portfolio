@@ -3,7 +3,7 @@
     <div class="mesh-container"></div>
     <div class="container">
       <div class="profile-image-wrapper">
-        <img src="assets/images/profile.png" class="profile-image" />
+        <img src="images/profile.png" class="profile-image" />
         Berlin, 2022/02/21
       </div>
       <div class="section">

@@ -26,7 +26,8 @@ onMounted(() => {
       // create lunar object
 			const lunarGeometry = new THREE.SphereGeometry(1, 32, 32);
 			const lunarMaterial = new THREE.MeshBasicMaterial({ 
-        map: new THREE.TextureLoader().load("/assets/textures/lunar.png")
+        map: new THREE.TextureLoader().load("textures/lunar.png"),
+				bumpMap: new THREE.TextureLoader().load("textures/lunar_bump.png")
       });
 			const lunar = new THREE.Mesh( lunarGeometry, lunarMaterial );
 			scene.add(lunar);
@@ -34,11 +35,31 @@ onMounted(() => {
 			camera.position.z = 3;
 
       function animate() {
-        lunar.rotation.y += 0.001;
+        //lunar.rotation.y += 0.001;
 				requestAnimationFrame( animate );
 				renderer.render( scene, camera );
 			};
 
 			animate();
+
+			// rotate on mouse hover
+			let lastMove = [window.innerWidth/2, window.innerHeight/2];
+
+			function rotateOnMouseMove(e) {
+				e = e || window.event;
+
+				//calculate difference between current and last mouse position
+				const moveX = ( e.clientX - lastMove[0]);
+				const moveY = ( e.clientY - lastMove[1]);
+				//rotate the globe based on distance of mouse moves (x and y) 
+				lunar.rotation.y += ( moveX * .005);
+				lunar.rotation.x += ( moveY * .005);
+
+				//store new position in lastMove
+				lastMove[0] = e.clientX;
+				lastMove[1] = e.clientY;
+			}
+
+			document.addEventListener('mousemove', rotateOnMouseMove);
 });
 </script>
