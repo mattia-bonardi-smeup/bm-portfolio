@@ -4,7 +4,7 @@
     <div class="container">
       <div class="profile-image-wrapper">
         <img src="/images/profile.png" class="profile-image" />
-        Berlin, 2022/02/21
+        Berlin, 2022/02/22
       </div>
       <div class="section">
         <div class="presentation">
@@ -32,12 +32,15 @@
             <skillchip icon="mongo" text="Mongo"></skillchip>
             <skillchip icon="mysql" text="MySql"></skillchip>
             <skillchip icon="redis" text="Redis"></skillchip>
-            <skillchip icon="firebase" text="Firebase"></skillchip>
           </div>
           <div class="skills-row">
-            <skillchip icon="nginx" text="Nginx"></skillchip>
+            <skillchip icon="firebase" text="Firebase"></skillchip>
             <skillchip icon="as400" text="As400"></skillchip>
             <skillchip icon="c++" text="C++"></skillchip>
+          </div>
+          <div class="skills-row">
+            <skillchip icon="go" text="Go"></skillchip>
+            <skillchip icon="cobra" text="Cobra"></skillchip>
           </div>
         </div>
       </div>
@@ -75,6 +78,7 @@
           <div class="skills-row">
             <skillchip icon="lambda" text="AWS Lambda"></skillchip>
             <skillchip icon="s3" text="AWS S3"></skillchip>
+            <skillchip icon="nginx" text="Nginx"></skillchip>
           </div>
         </div>
       </div>
@@ -119,13 +123,15 @@
       </div>
       <div class="section">
         <h2 class="contact-title">Feel free<br>to contact me</h2>
-        <h2 class="contact-mail">mattiabonardi99@gmail.com</h2>
+        <h2 class="contact-mail"><span class="mail-link" @click="toMail">mattiabonardi99@gmail.com</span></h2>
       </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
+const toMail = () => window.open('mailto:mattiabonardi99@gmail.com');
+
 const reveal = () => {
   var reveals = document.querySelectorAll(".reveal");
 
@@ -241,15 +247,21 @@ onMounted(() => {
 }
 
 .contact-title{
+  width: 100%;
   font-family: "Lato",sans-serif;
   text-align: left;
   font-size: 35px;
 }
 
 .contact-mail{
+  width: 100%;
   font-family: "Lato",sans-serif;
   text-align: right;
   font-size: 20px;
+}
+
+.mail-link{
+  cursor: pointer;
 }
 
 /** Desktop */
