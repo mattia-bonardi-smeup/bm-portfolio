@@ -62,7 +62,6 @@ const toMail = () => window.open('mailto:mattiabonardi99@gmail.com');
   opacity: 0.86;
   z-index: 5;
   opacity: 0.9;
-  pointer-events: none;
 }
 
 .title{
