@@ -2,10 +2,10 @@
   <div>
     <div class="mesh-container">
       <client-only>
-        <Lunar></Lunar>
+        <Pc></Pc>
       </client-only>
     </div>
-    <div class="title-wrapper">
+    <div ref="titleWrapper" class="title-wrapper">
         <h2 class="subtitle">I'm Mattia, a full stack</h2>
         <h1 class="title">DEVELOPER</h1>
     </div>
@@ -21,9 +21,9 @@
 <script lang="ts">
 export default {
   components: {
-    Lunar: () => {
+    Pc: () => {
       if(process.client) {
-        return import('../components/lunar.vue');
+        return import('../components/pc.vue');
       }
     },
   }
@@ -37,7 +37,10 @@ const toGitHub = () => window.open("https://github.com/mattiabonardi", "_blank")
 const toMail = () => window.open('mailto:mattiabonardi99@gmail.com');
 </script>
 
-<style>
+<style scoped>
+body{
+  pointer-events: none;
+}
 /** Background */
 .mesh-container{
   position: fixed;
@@ -49,9 +52,11 @@ const toMail = () => window.open('mailto:mattiabonardi99@gmail.com');
   margin: 0;
   padding: 0;
   border: 0;
+  pointer-events: none;
 }
 
 .title-wrapper {
+  pointer-events: none;
   position: relative;
   padding: 0 75px 0;
   text-align: right;
@@ -62,9 +67,15 @@ const toMail = () => window.open('mailto:mattiabonardi99@gmail.com');
   opacity: 0.86;
   z-index: 5;
   opacity: 0.9;
+  user-select: none; /* supported by Chrome and Opera */
+   -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+   -moz-user-select: none; /* Firefox */
+   -ms-user-select: none; /* Internet Explorer/Edge */
 }
 
 .title{
+  pointer-events: none;
   font-size: 40px;
   margin: 0;
   font-family: 'Lato', sans-serif;
@@ -72,6 +83,7 @@ const toMail = () => window.open('mailto:mattiabonardi99@gmail.com');
 }
 
 .subtitle{
+  pointer-events: none;
   font-size: 20px;
   font-family: 'Lato', sans-serif;
 }

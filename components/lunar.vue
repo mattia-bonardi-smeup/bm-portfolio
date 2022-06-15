@@ -36,7 +36,7 @@ onMounted(() => {
 	camera.position.z = 3;
 
 	// create controls
-	const controls = new OrbitControls(camera, document.body);
+	const controls = new OrbitControls(camera, document.querySelector("title-wrapper"));
 	controls.update();
 
 	function animate() {

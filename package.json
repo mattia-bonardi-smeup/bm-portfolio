@@ -9,6 +9,7 @@
     "heroku:deploy": "git push heroku main"
   },
   "dependencies": {
+    "@splinetool/loader": "^0.9.69",
     "three": "^0.140.0"
   },
   "devDependencies": {
