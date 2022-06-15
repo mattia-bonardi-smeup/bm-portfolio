@@ -102,6 +102,10 @@ const menuToggle = () => {
   cursor: pointer;
 }
 
+.menu-item:hover{
+  text-decoration: line-through;
+}
+
 .menu-button{
   position: relative;
   cursor: pointer;

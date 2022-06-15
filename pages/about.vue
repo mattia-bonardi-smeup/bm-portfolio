@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="mesh-container"></div>
+    <div class="back-container"></div>
     <div class="container">
       <div class="profile-image-wrapper">
         <img src="/images/profile.png" class="profile-image" />
@@ -153,7 +153,7 @@ onMounted(() => {
 </script>
 
 <style scoped>
-.mesh-container{
+.back-container{
   position: fixed;
   z-index: -1;
   top: 0;
@@ -163,7 +163,7 @@ onMounted(() => {
   margin: 0;
   padding: 0;
   border: 0;
-  background-color: #121212;
+  background-color: black;
 }
 
 .container{
