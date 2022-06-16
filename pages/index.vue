@@ -32,7 +32,7 @@ const titleWrapper = ref();
 
 onMounted(() => {
 	// camera
-	const camera = new THREE.OrthographicCamera(window.innerWidth / - 2, window.innerWidth / 2, window.innerHeight / 2, window.innerHeight / - 2,  -50000, 50000);
+	const camera = new THREE.OrthographicCamera(window.innerWidth / - 1.8, window.innerWidth / 1.8, window.innerHeight / 1.8, window.innerHeight / - 1.8,  -50000, 50000);
 	camera.position.set(40.96, 1.22, 1000);
 	camera.quaternion.setFromEuler(new THREE.Euler(0, 0, 0));
 
