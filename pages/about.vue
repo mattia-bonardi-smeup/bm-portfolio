@@ -163,7 +163,11 @@ onMounted(() => {
   margin: 0;
   padding: 0;
   border: 0;
-  background-color: black;
+  background: -moz-linear-gradient(45deg, rgba(0,0,71,1) 0%, rgba(0,0,48,1) 32%, rgba(0,0,0,1) 100%);
+  background: -webkit-linear-gradient(45deg, rgba(0,0,71,1) 0%, rgba(0,0,48,1) 32%, rgba(0,0,0,1) 100%);
+  background: -o-linear-gradient(45deg, rgba(0,0,71,1) 0%, rgba(0,0,48,1) 32%, rgba(0,0,0,1) 100%);
+  background: -ms-linear-gradient(45deg, rgba(0,0,71,1) 0%, rgba(0,0,48,1) 32%, rgba(0,0,0,1) 100%);
+  background: linear-gradient(45deg, rgba(0,0,71,1) 0%, rgba(0,0,48,1) 32%, rgba(0,0,0,1) 100%); 
 }
 
 .container{

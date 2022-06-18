@@ -37,7 +37,10 @@ onMounted(() => {
 	camera.quaternion.setFromEuler(new THREE.Euler(0, 0, 0));
 
 	// scene
-	const scene = new THREE.Scene();
+  const scene = new THREE.Scene();
+  const textureLoader = new THREE.TextureLoader();
+  scene.background = textureLoader.load("textures/background.png");
+  //scene.background = new THREE.Color("transparent");
 
 	// spline scene
 	const loader = new SplineLoader();
@@ -49,9 +52,10 @@ onMounted(() => {
 	);
 
 	// renderer
-	const renderer = new THREE.WebGLRenderer({ antialias: true });
+	const renderer = new THREE.WebGLRenderer({ alpha: true });
 	renderer.setSize(window.innerWidth, window.innerHeight);
-	renderer.setAnimationLoop(animate);
+  renderer.setAnimationLoop(animate);
+  renderer.setClearColor( 0x000000, 0 );
 	threeContainer.value.appendChild(renderer.domElement);
 
 	// scene settings
@@ -63,7 +67,8 @@ onMounted(() => {
   // orbit controls
 	const controls = new OrbitControls(camera, titleWrapper.value);
 	controls.enableDamping = true;
-	controls.dampingFactor = 0.125;
+  controls.dampingFactor = 0.125;
+  controls.rotateSpeed = 0.5;
 
 	window.addEventListener('resize', onWindowResize);
 	function onWindowResize() {
