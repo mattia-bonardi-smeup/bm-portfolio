@@ -60,7 +60,8 @@ onMounted(() => {
 
 	// scene settings
 	renderer.shadowMap.enabled = true;
-	renderer.shadowMap.type = THREE.PCFShadowMap;
+  renderer.shadowMap.type = THREE.PCFShadowMap;
+  renderer.xr.enabled = true;
 
   renderer.setClearAlpha(1);
   
