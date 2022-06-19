@@ -12,7 +12,6 @@
       <icon class="social" icon="linkedin" size="20" @click="toLinkedin"></icon>
       <icon class="social" icon="mail" size="20" @click="toMail"></icon>
     </footer>
-    <div ref="ar" class="ar"></div>
   </div>
 </template>
 
@@ -22,7 +21,6 @@ import * as THREE from "three";
 import { ref } from "vue";
 import SplineLoader from '@splinetool/loader';
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js"; 
-import { ARButton } from "three/examples/jsm/webxr/ARButton.js";
 
 const toLinkedin = () => window.open("https://www.linkedin.com/in/mattia-bonardi-099b02235/","_blank");
 const toInstagram = () => window.open("https://www.instagram.com/mattiaabonardi/", "_blank");
@@ -63,7 +61,6 @@ onMounted(() => {
 	// scene settings
 	renderer.shadowMap.enabled = true;
   renderer.shadowMap.type = THREE.PCFShadowMap;
-  renderer.xr.enabled = true;
 
   renderer.setClearAlpha(1);
   
@@ -73,11 +70,6 @@ onMounted(() => {
   controls.dampingFactor = 0.125;
   controls.rotateSpeed = 0.4;
   controls.panSpeed = 0.4;
-
-  // AR support
-  // ad AR button to dom
-  const arButton = ARButton.createButton(renderer);
-  ar.value.appendChild(arButton);
 
 	window.addEventListener('resize', onWindowResize);
 	function onWindowResize() {
@@ -144,7 +136,7 @@ body{
 }
 
 .footer{
-  height: 10vh;
+  height: 20vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -152,18 +144,6 @@ body{
 }
 
 .social{
-  cursor: pointer;
-}
-
-.ar{
-  height: 10vh;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-#ARButton {
   cursor: pointer;
 }
 
