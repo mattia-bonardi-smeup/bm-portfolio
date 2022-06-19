@@ -21,6 +21,7 @@ import * as THREE from "three";
 import { ref } from "vue";
 import SplineLoader from '@splinetool/loader';
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js"; 
+import { ARButton } from "three/examples/jsm/webxr/ARButton.js";
 
 const toLinkedin = () => window.open("https://www.linkedin.com/in/mattia-bonardi-099b02235/","_blank");
 const toInstagram = () => window.open("https://www.instagram.com/mattiaabonardi/", "_blank");
@@ -40,7 +41,6 @@ onMounted(() => {
   const scene = new THREE.Scene();
   const textureLoader = new THREE.TextureLoader();
   scene.background = textureLoader.load("textures/background.png");
-  //scene.background = new THREE.Color("transparent");
 
 	// spline scene
 	const loader = new SplineLoader();
@@ -68,7 +68,13 @@ onMounted(() => {
 	const controls = new OrbitControls(camera, titleWrapper.value);
 	controls.enableDamping = true;
   controls.dampingFactor = 0.125;
-  controls.rotateSpeed = 0.5;
+  controls.rotateSpeed = 0.4;
+  controls.panSpeed = 0.4;
+
+  // AR support
+  // ad AR button to dom
+  const arButton = ARButton.createButton(renderer);
+  threeContainer.value.appendChild(arButton);
 
 	window.addEventListener('resize', onWindowResize);
 	function onWindowResize() {
