@@ -5,6 +5,7 @@
         <NuxtLink class="logo" to="/">BM.</NuxtLink>
       </div>
       <div class="menu" :class="{active: isActive}">
+      <a class="menu-item" @click="changePage('/')">HOME</a>
         <a class="menu-item" @click="changePage('/about')">ABOUT</a>
       </div>
       <div class="menu-button-wrapper">
