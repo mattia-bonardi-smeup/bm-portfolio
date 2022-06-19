@@ -12,6 +12,7 @@
       <icon class="social" icon="linkedin" size="20" @click="toLinkedin"></icon>
       <icon class="social" icon="mail" size="20" @click="toMail"></icon>
     </footer>
+    <div ref="ar" class="ar"></div>
   </div>
 </template>
 
@@ -30,6 +31,7 @@ const toMail = () => window.open('mailto:mattiabonardi99@gmail.com');
 
 const threeContainer = ref();
 const titleWrapper = ref();
+const ar = ref();
 
 onMounted(() => {
 	// camera
@@ -75,7 +77,7 @@ onMounted(() => {
   // AR support
   // ad AR button to dom
   const arButton = ARButton.createButton(renderer);
-  threeContainer.value.appendChild(arButton);
+  ar.value.appendChild(arButton);
 
 	window.addEventListener('resize', onWindowResize);
 	function onWindowResize() {
@@ -142,7 +144,7 @@ body{
 }
 
 .footer{
-  height: 20vh;
+  height: 10vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -150,6 +152,18 @@ body{
 }
 
 .social{
+  cursor: pointer;
+}
+
+.ar{
+  height: 10vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#ARButton {
   cursor: pointer;
 }
 
