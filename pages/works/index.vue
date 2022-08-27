@@ -10,7 +10,7 @@
           Collection of authentication functions for Node.js applications.
         </div>
         <div class="work-image-container">
-          <img class="work-image" src="images/authmodule.png" />
+          <img class="work-image" src="/images/authmodule.png" />
         </div>
         <div class="work-details">
           <div class="work-scope">
@@ -30,7 +30,7 @@
           Personal wiki for any kind of use.
         </div>
         <div class="work-image-container">
-          <img class="work-image" src="images/bmwiki.png" />
+          <img class="work-image" src="/images/bmwiki.png" />
         </div>
         <div class="work-details">
           <div class="work-scope">
@@ -50,7 +50,7 @@
           Little web application for controlling a light bulb.
         </div>
         <div class="work-image-container">
-          <img class="work-image" src="images/minilighthub.png" />
+          <img class="work-image" src="/images/minilighthub.png" />
         </div>
         <div class="work-details">
           <div class="work-scope">
