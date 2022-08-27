@@ -21,7 +21,7 @@
         <div class="skills-wrapper">
           <div class="skills-row">
             <skillchip icon="node-js" text="Node js"></skillchip>
-            <skillchip icon="vitejs" text="Vite js"></skillchip>
+            <skillchip icon="express" text="Express js"></skillchip>
           </div>
           <div class="skills-row">
             <skillchip icon="java" text="Java EE"></skillchip>
@@ -59,11 +59,12 @@
           <div class="skills-row">
             <skillchip icon="typescript" text="Typescript"></skillchip>
             <skillchip icon="javascript" text="Javascript"></skillchip>
+            <skillchip icon="react" text="React"></skillchip>
           </div>
         </div>
       </div>
       <div class="section">
-        <h2 class="section-title">Deployments Skills</h2>
+        <h2 class="section-title">DevOps Skills</h2>
         <div class="skills-wrapper">
           <div class="skills-row">
             <skillchip icon="docker" text="Docker"></skillchip>

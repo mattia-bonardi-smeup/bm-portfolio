@@ -16,7 +16,7 @@ export default {
     },
     color: {
       type: String,
-      default: "white"
+      default: "#E8EAED"
     }
   },
   emits: ["iconClick"],

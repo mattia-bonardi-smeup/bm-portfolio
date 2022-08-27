@@ -29,12 +29,19 @@ const toMail = () => window.open('mailto:mattiabonardi99@gmail.com');
 
 const threeContainer = ref();
 const titleWrapper = ref();
-const ar = ref();
+
+
 
 onMounted(() => {
+  let n: number;
+  if (window.innerWidth > 1000) {
+    n = 1.8
+  } else {
+    n = 1.2
+  }
 	// camera
-	const camera = new THREE.OrthographicCamera(window.innerWidth / - 1.8, window.innerWidth / 1.8, window.innerHeight / 1.8, window.innerHeight / - 1.8,  -50000, 50000);
-	camera.position.set(40.96, 1.22, 1000);
+	const camera = new THREE.OrthographicCamera(window.innerWidth / - n, window.innerWidth / n, window.innerHeight / n, window.innerHeight / - n,  -50000, 50000);
+	camera.position.set(40.96, 1.22, 100);
 	camera.quaternion.setFromEuler(new THREE.Euler(0, 0, 0));
 
 	// scene

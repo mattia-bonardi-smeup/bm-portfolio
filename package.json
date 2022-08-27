@@ -6,13 +6,13 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "start": "node .output/server/index.mjs",
-    "heroku:deploy": "git push heroku main"
+    "deploy:heroku": "git push heroku main"
   },
   "dependencies": {
     "@splinetool/loader": "^0.9.69",
     "three": "^0.140.0"
   },
   "devDependencies": {
-    "nuxt": "3.0.0-rc.3"
+    "nuxt": "3.0.0-rc.8"
   }
 }
