@@ -8,12 +8,12 @@
       </div>
       <div class="section">
         <div class="presentation">
-          I'm Mattia Bonardi and I come from Italy. 
-          I believe that each of us must never set limits. 
-          Everyone must aspire to be the best version of themselves. 
-          This is my vision and it's the reason why 
-          I will always have the strength to listen and learn something new, 
-          even if it does not belong to me completely.
+          I'm Mattia Bonardi and I’m from Italy. 
+          I believe that each of us must never set any limits to ourselves and 
+          that everyone must aspire to be the best version of themselves. 
+          This is my vision and it's the reason why I will always have the 
+          desire and the curiosity to learn something new and to abroaden my 
+          horizons thanks to the advices and experiences of others. 
         </div>
       </div>
       <div class="section">
