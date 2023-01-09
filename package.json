@@ -5,15 +5,14 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "start": "node .output/server/index.mjs",
-    "deploy:heroku": "git push heroku main"
+    "start": "node .output/server/index.mjs"
   },
   "dependencies": {
     "@splinetool/loader": "^0.9.69",
     "three": "^0.140.0"
   },
   "devDependencies": {
-    "nuxt": "3.0.0-rc.8"
+    "nuxt": "3.0.0"
   },
   "engines": {
     "node": ">=16.0.0"

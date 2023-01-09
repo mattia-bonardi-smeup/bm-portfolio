@@ -20,7 +20,7 @@ import { onMounted } from "@vue/runtime-core";
 import * as THREE from "three";
 import { ref } from "vue";
 import SplineLoader from '@splinetool/loader';
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js"; 
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls"; 
 
 const toLinkedin = () => window.open("https://www.linkedin.com/in/mattia-bonardi-099b02235/","_blank");
 const toInstagram = () => window.open("https://www.instagram.com/mattiaabonardi/", "_blank");
@@ -88,7 +88,7 @@ onMounted(() => {
 		renderer.setSize(window.innerWidth, window.innerHeight);
 	}
 
-	function animate(time) {
+	function animate() {
     renderer.render(scene, camera);
     controls.update();
 	}
